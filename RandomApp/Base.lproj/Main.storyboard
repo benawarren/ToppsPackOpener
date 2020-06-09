@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qC3-WY-rm0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s2P-dz-MC1">
+            <objects>
+                <viewController id="qC3-WY-rm0" customClass="ViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gON-b5-D3Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSM-xM-bnR">
+                                <rect key="frame" x="0.0" y="29" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Packs" id="qor-EQ-Moe">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="ag1-bV-PMM">
+                                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3lU-cx-zi9">
+                                                <rect key="frame" x="20" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="p9u-An-ic3">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DvC-qV-jdh">
+                                                <rect key="frame" x="302" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                                <connections>
+                                                    <segue destination="XL6-bA-pcD" kind="show" id="U6c-6k-fYa"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <segue destination="XL6-bA-pcD" kind="show" id="Bg7-MS-N7i"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rjA-4e-6A9">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YDC-VB-dek">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cvcell" id="NA6-ka-WYr" customClass="CustomCVCell" customModule="Topps_Pack_Opener" customModuleProvider="target">
+                                        <rect key="frame" x="107" y="0.0" width="200" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="etT-PX-p55">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1957 Topps" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-Ln-710">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oy6-Ln-710" firstAttribute="top" secondItem="etT-PX-p55" secondAttribute="top" id="Ix3-uj-IWo"/>
+                                                <constraint firstAttribute="trailing" secondItem="oy6-Ln-710" secondAttribute="trailing" id="MCR-uh-2tL"/>
+                                                <constraint firstItem="oy6-Ln-710" firstAttribute="leading" secondItem="etT-PX-p55" secondAttribute="leading" id="uAs-Pu-boU"/>
+                                                <constraint firstAttribute="bottom" secondItem="oy6-Ln-710" secondAttribute="bottom" id="yRj-hc-hPa"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="300"/>
+                                        <connections>
+                                            <outlet property="image" destination="oy6-Ln-710" id="uXx-DP-oF6"/>
+                                            <segue destination="bp4-TL-47S" kind="show" identifier="Topps57" id="11J-hT-oBd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cvcell1" id="ISZ-bn-Z0d" customClass="CustomCVCell" customModule="Topps_Pack_Opener" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="310" width="516" height="716"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jcs-tD-kxw">
+                                            <rect key="frame" x="0.0" y="0.0" width="516" height="716"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1970 Topps" translatesAutoresizingMaskIntoConstraints="NO" id="AWb-el-d2G">
+                                                    <rect key="frame" x="0.0" y="0.0" width="516" height="716"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AWb-el-d2G" firstAttribute="leading" secondItem="jcs-tD-kxw" secondAttribute="leading" id="BMI-GG-KoO"/>
+                                                <constraint firstAttribute="bottom" secondItem="AWb-el-d2G" secondAttribute="bottom" id="DZ6-jQ-FPX"/>
+                                                <constraint firstAttribute="trailing" secondItem="AWb-el-d2G" secondAttribute="trailing" id="Zfv-xE-2o4"/>
+                                                <constraint firstItem="AWb-el-d2G" firstAttribute="top" secondItem="jcs-tD-kxw" secondAttribute="top" id="mL3-rh-6g0"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="AWb-el-d2G" id="C6T-w6-Opc"/>
+                                            <segue destination="6aT-8k-Hk2" kind="show" identifier="Topps70" id="ccH-3n-JFc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cvcell2" id="WvG-L4-wK9" customClass="CustomCVCell" customModule="Topps_Pack_Opener" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1036" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1IC-dp-kxi">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2018 Topps Update" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-BS-B3e">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dTW-BS-B3e" firstAttribute="top" secondItem="1IC-dp-kxi" secondAttribute="top" id="Foi-tq-ueg"/>
+                                                <constraint firstAttribute="trailing" secondItem="dTW-BS-B3e" secondAttribute="trailing" id="PCu-9A-vec"/>
+                                                <constraint firstItem="dTW-BS-B3e" firstAttribute="leading" secondItem="1IC-dp-kxi" secondAttribute="leading" id="hc2-o5-9l8"/>
+                                                <constraint firstAttribute="bottom" secondItem="dTW-BS-B3e" secondAttribute="bottom" id="wTd-dz-3qA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="dTW-BS-B3e" id="Z3y-BW-PAH"/>
+                                            <segue destination="zzO-Kq-cJg" kind="show" identifier="Topps18" id="BjX-gM-5Kb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cvcell3" id="jDT-O0-KNe" customClass="CustomCVCell" customModule="Topps_Pack_Opener" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="1036" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rsR-UJ-chM">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2019 Topps" translatesAutoresizingMaskIntoConstraints="NO" id="xxC-qz-OgB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="xxC-qz-OgB" secondAttribute="trailing" id="5wM-9g-mb5"/>
+                                                <constraint firstItem="xxC-qz-OgB" firstAttribute="leading" secondItem="rsR-UJ-chM" secondAttribute="leading" id="Dg3-zO-4Y9"/>
+                                                <constraint firstItem="xxC-qz-OgB" firstAttribute="top" secondItem="rsR-UJ-chM" secondAttribute="top" id="bH8-pH-dFJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="xxC-qz-OgB" secondAttribute="bottom" id="zKu-1P-aOb"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="xxC-qz-OgB" id="PYY-Wz-ZT7"/>
+                                            <segue destination="299-04-cbF" kind="show" identifier="Topps19" id="vFg-V9-iPd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qC3-WY-rm0" id="hm1-Qm-A1D"/>
+                                    <outlet property="delegate" destination="qC3-WY-rm0" id="WzY-Qu-R33"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rjA-4e-6A9" firstAttribute="leading" secondItem="u2P-CO-kRr" secondAttribute="leading" id="0HF-Yl-9Hu"/>
+                            <constraint firstItem="u2P-CO-kRr" firstAttribute="trailing" secondItem="rjA-4e-6A9" secondAttribute="trailing" id="11N-yQ-zOa"/>
+                            <constraint firstItem="u2P-CO-kRr" firstAttribute="bottom" secondItem="rjA-4e-6A9" secondAttribute="bottom" id="lfZ-hX-CmH"/>
+                            <constraint firstItem="rjA-4e-6A9" firstAttribute="top" secondItem="u2P-CO-kRr" secondAttribute="top" constant="100" id="pGu-5Y-O43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u2P-CO-kRr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W6w-Mg-5dt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2H6-A1-e7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742.02898550724649" y="24.776785714285712"/>
+        </scene>
+        <!--Update18 View Controller-->
+        <scene sceneID="5Ko-Xn-8ds">
+            <objects>
+                <viewController id="zzO-Kq-cJg" customClass="Update18ViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4R-pf-lI2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bED-Ow-ziu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+                                <items>
+                                    <navigationItem title="2018 Topps Update" id="vSY-P8-bLN">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="S05-jN-hrN">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mLg-uR-p2V">
+                                                <rect key="frame" x="20" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <segue destination="qC3-WY-rm0" kind="show" id="Ge8-eN-ope"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="aTV-pw-OSG">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FIu-F9-eXo">
+                                                <rect key="frame" x="302" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                                <connections>
+                                                    <segue destination="XL6-bA-pcD" kind="show" id="1TD-Yy-heo"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnx-gL-yAH">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                                <connections>
+                                    <action selector="switchCard:" destination="zzO-Kq-cJg" eventType="touchUpInside" id="a3Y-s9-AqK"/>
+                                    <segue destination="qC3-WY-rm0" kind="show" identifier="back" id="D2M-0s-BRp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2018 Topps Update" translatesAutoresizingMaskIntoConstraints="NO" id="9Az-EP-S3c">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uBr-yX-ztL" firstAttribute="bottom" secondItem="jnx-gL-yAH" secondAttribute="bottom" id="4sE-g1-fOX"/>
+                            <constraint firstItem="bED-Ow-ziu" firstAttribute="trailing" secondItem="uBr-yX-ztL" secondAttribute="trailing" id="EXq-Ve-mBx"/>
+                            <constraint firstItem="bED-Ow-ziu" firstAttribute="top" secondItem="uBr-yX-ztL" secondAttribute="top" id="Ek2-Mx-4Wc"/>
+                            <constraint firstItem="uBr-yX-ztL" firstAttribute="bottom" secondItem="bED-Ow-ziu" secondAttribute="bottom" constant="100" id="G8D-tA-xdC"/>
+                            <constraint firstItem="9Az-EP-S3c" firstAttribute="leading" secondItem="uBr-yX-ztL" secondAttribute="leading" id="JEK-CA-jA4"/>
+                            <constraint firstItem="9Az-EP-S3c" firstAttribute="top" secondItem="uBr-yX-ztL" secondAttribute="top" constant="100" id="NCV-Ds-9F9"/>
+                            <constraint firstItem="uBr-yX-ztL" firstAttribute="trailing" secondItem="jnx-gL-yAH" secondAttribute="trailing" id="NWA-vs-caT"/>
+                            <constraint firstItem="uBr-yX-ztL" firstAttribute="bottom" secondItem="9Az-EP-S3c" secondAttribute="bottom" id="QzR-oZ-Urw"/>
+                            <constraint firstItem="uBr-yX-ztL" firstAttribute="trailing" secondItem="9Az-EP-S3c" secondAttribute="trailing" id="WyJ-35-Y8g"/>
+                            <constraint firstItem="jnx-gL-yAH" firstAttribute="top" secondItem="uBr-yX-ztL" secondAttribute="top" constant="100" id="iio-Vq-eeu"/>
+                            <constraint firstItem="jnx-gL-yAH" firstAttribute="leading" secondItem="uBr-yX-ztL" secondAttribute="leading" id="kxI-66-Mfn"/>
+                            <constraint firstItem="bED-Ow-ziu" firstAttribute="leading" secondItem="uBr-yX-ztL" secondAttribute="leading" id="uXZ-j8-Jxm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBr-yX-ztL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yHp-jb-0Wp"/>
+                    <connections>
+                        <outlet property="card" destination="9Az-EP-S3c" id="xaJ-cl-f2a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6k-yd-2K4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="-921.42857142857133"/>
+        </scene>
+        <!--Card Controller-->
+        <scene sceneID="N7Y-0l-LtE">
+            <objects>
+                <viewController id="299-04-cbF" customClass="CardController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RjR-aV-lSb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-AK-TVX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                <items>
+                                    <navigationItem title="2019 Topps" id="ZnK-Gc-Mz5">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="le8-VY-XBt">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ibx-Ci-PQc">
+                                                <rect key="frame" x="20" y="13" width="41" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <segue destination="qC3-WY-rm0" kind="show" id="ZK4-B9-1BF"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="GaZ-bw-O9B">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kc2-sY-a4d">
+                                                <rect key="frame" x="325" y="13" width="69" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                                <connections>
+                                                    <segue destination="XL6-bA-pcD" kind="show" id="Rht-Vw-3gi"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-s1-XQ4">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                                <connections>
+                                    <action selector="switchCard:" destination="299-04-cbF" eventType="touchUpInside" id="x9q-jj-YRg"/>
+                                    <segue destination="qC3-WY-rm0" kind="show" identifier="back" id="qMi-ek-gnx"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PackImage19Topps" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-zo-cDA">
+                                <rect key="frame" x="10" y="50" width="394" height="708"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Eoc-AK-TVX" secondAttribute="bottom" constant="100" id="DoB-Su-D7O"/>
+                            <constraint firstItem="Eoc-AK-TVX" firstAttribute="top" secondItem="RjR-aV-lSb" secondAttribute="top" id="H0V-s5-2ua"/>
+                            <constraint firstItem="Eoc-AK-TVX" firstAttribute="leading" secondItem="RjR-aV-lSb" secondAttribute="leading" id="Pcp-dy-hQX"/>
+                            <constraint firstItem="hbt-s1-XQ4" firstAttribute="top" secondItem="1p0-vn-4tv" secondAttribute="top" constant="100" id="S3S-Xr-Zyb"/>
+                            <constraint firstItem="1p0-vn-4tv" firstAttribute="trailing" secondItem="FQu-zo-cDA" secondAttribute="trailing" constant="10" id="TMf-SQ-vO4"/>
+                            <constraint firstItem="1p0-vn-4tv" firstAttribute="trailing" secondItem="hbt-s1-XQ4" secondAttribute="trailing" id="Vvr-mZ-weu"/>
+                            <constraint firstItem="1p0-vn-4tv" firstAttribute="bottom" secondItem="FQu-zo-cDA" secondAttribute="bottom" constant="50" id="aGo-b8-V1e"/>
+                            <constraint firstItem="FQu-zo-cDA" firstAttribute="top" secondItem="1p0-vn-4tv" secondAttribute="top" constant="50" id="bnC-yl-uy6"/>
+                            <constraint firstItem="hbt-s1-XQ4" firstAttribute="leading" secondItem="1p0-vn-4tv" secondAttribute="leading" id="jnT-zf-gR4"/>
+                            <constraint firstItem="FQu-zo-cDA" firstAttribute="leading" secondItem="1p0-vn-4tv" secondAttribute="leading" constant="10" id="qxQ-3X-isj"/>
+                            <constraint firstItem="1p0-vn-4tv" firstAttribute="bottom" secondItem="hbt-s1-XQ4" secondAttribute="bottom" id="rkH-aU-2Qc"/>
+                            <constraint firstAttribute="trailing" secondItem="Eoc-AK-TVX" secondAttribute="trailing" id="yel-Ao-OoU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1p0-vn-4tv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tyi-gS-AUU"/>
+                    <connections>
+                        <outlet property="card" destination="FQu-zo-cDA" id="M6T-9T-rlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWD-VX-PV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="-234"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="vbJ-mQ-myb">
+            <objects>
+                <viewController id="XL6-bA-pcD" customClass="CollectionViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asR-hi-Cwq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="mCR-9V-flO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                <items>
+                                    <navigationItem title="My Collection" id="8BV-g8-KJC">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="4Ar-XK-ETV">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PLa-8O-fnA">
+                                                <rect key="frame" x="20" y="13" width="41" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <segue destination="qC3-WY-rm0" kind="show" id="o2b-BP-WoH"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="USp-Lg-OPl">
+                                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rRc-cr-G2z">
+                                                <rect key="frame" x="325" y="13" width="69" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-ZC-g74">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kff-F3-n2d">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="3XZ-nK-2MO" customClass="CustomCell" customModule="Topps_Pack_Opener" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dbH-6v-Pyb">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-UR-B6T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="4UH-a2-bjh"/>
+                                                        <constraint firstAttribute="height" constant="150" id="8nX-AS-LjD"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ky8-UR-B6T" secondAttribute="trailing" id="ZJw-ff-S5i"/>
+                                                <constraint firstItem="ky8-UR-B6T" firstAttribute="top" secondItem="dbH-6v-Pyb" secondAttribute="top" id="aSr-Op-YVc"/>
+                                                <constraint firstAttribute="bottom" secondItem="ky8-UR-B6T" secondAttribute="bottom" id="hYz-MV-614"/>
+                                                <constraint firstItem="ky8-UR-B6T" firstAttribute="leading" secondItem="dbH-6v-Pyb" secondAttribute="leading" id="sBA-Yi-kQJ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="150"/>
+                                        <connections>
+                                            <outlet property="cardImage" destination="ky8-UR-B6T" id="M1E-aM-5hh"/>
+                                            <segue destination="3kI-Ia-WeZ" kind="show" identifier="toCard" id="k2n-6P-Nyh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XL6-bA-pcD" id="6om-CJ-L28"/>
+                                    <outlet property="delegate" destination="XL6-bA-pcD" id="ldF-7d-5kN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mCR-9V-flO" firstAttribute="leading" secondItem="asR-hi-Cwq" secondAttribute="leading" id="LLT-o7-qAQ"/>
+                            <constraint firstItem="XGI-ZC-g74" firstAttribute="leading" secondItem="heL-KQ-sjm" secondAttribute="leading" id="Tm3-cH-Xnu"/>
+                            <constraint firstItem="XGI-ZC-g74" firstAttribute="top" secondItem="heL-KQ-sjm" secondAttribute="top" constant="100" id="bay-pv-WuK"/>
+                            <constraint firstItem="XGI-ZC-g74" firstAttribute="bottom" secondItem="heL-KQ-sjm" secondAttribute="bottom" id="beP-wJ-arh"/>
+                            <constraint firstItem="mCR-9V-flO" firstAttribute="top" secondItem="asR-hi-Cwq" secondAttribute="top" id="kVb-t8-Ofe"/>
+                            <constraint firstAttribute="trailing" secondItem="mCR-9V-flO" secondAttribute="trailing" id="kcZ-R2-2uS"/>
+                            <constraint firstAttribute="bottom" secondItem="mCR-9V-flO" secondAttribute="bottom" constant="100" id="m1J-ur-9Ok"/>
+                            <constraint firstItem="XGI-ZC-g74" firstAttribute="trailing" secondItem="heL-KQ-sjm" secondAttribute="trailing" id="pqV-er-7Lj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="heL-KQ-sjm"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="XGI-ZC-g74" id="Vqa-Ub-vVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYj-Fc-Luw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.00000000000011" y="129.91071428571428"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="a3o-I0-nGL">
+            <objects>
+                <viewController id="3kI-Ia-WeZ" customClass="CardViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="itd-MV-0f0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqC-Sk-yXp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gqC-Sk-yXp" secondAttribute="bottom" id="Jja-bZ-I3R"/>
+                            <constraint firstItem="gqC-Sk-yXp" firstAttribute="trailing" secondItem="Izc-50-lb2" secondAttribute="trailing" id="XaE-Se-jJQ"/>
+                            <constraint firstItem="gqC-Sk-yXp" firstAttribute="top" secondItem="itd-MV-0f0" secondAttribute="top" id="fp7-oI-Hmb"/>
+                            <constraint firstItem="gqC-Sk-yXp" firstAttribute="leading" secondItem="Izc-50-lb2" secondAttribute="leading" id="gzM-4r-WkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Izc-50-lb2"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="gqC-Sk-yXp" id="AEQ-HJ-dAG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKM-2b-mzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.68115942029" y="129.91071428571428"/>
+        </scene>
+        <!--Topps57 View Controller-->
+        <scene sceneID="W74-L7-wft">
+            <objects>
+                <viewController id="bp4-TL-47S" customClass="Topps57ViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbx-xP-Eh2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7e0-ae-XZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                <items>
+                                    <navigationItem title="1957 Topps" id="wEv-et-oGE">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="nwu-xo-MSv">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D6r-yo-17c">
+                                                <rect key="frame" x="20" y="13" width="41" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <segue destination="qC3-WY-rm0" kind="show" id="866-GY-s8r"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="lEe-ic-dT0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V0b-Ck-8li">
+                                                <rect key="frame" x="325" y="13" width="69" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                                <connections>
+                                                    <segue destination="XL6-bA-pcD" kind="show" id="HMU-Kh-Am8"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1957 Topps" translatesAutoresizingMaskIntoConstraints="NO" id="seq-6X-Vde">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npg-IX-5S5">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <connections>
+                                    <action selector="switchCard:" destination="bp4-TL-47S" eventType="touchUpInside" id="BTz-Mj-3bs"/>
+                                    <segue destination="qC3-WY-rm0" kind="show" identifier="back" id="BZv-kw-Urs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Npg-IX-5S5" firstAttribute="leading" secondItem="afO-JY-Xce" secondAttribute="leading" id="1YV-Xe-sPh"/>
+                            <constraint firstItem="7e0-ae-XZZ" firstAttribute="leading" secondItem="sbx-xP-Eh2" secondAttribute="leading" id="549-fp-jeL"/>
+                            <constraint firstItem="afO-JY-Xce" firstAttribute="trailing" secondItem="Npg-IX-5S5" secondAttribute="trailing" id="5cM-kZ-aJA"/>
+                            <constraint firstAttribute="bottom" secondItem="7e0-ae-XZZ" secondAttribute="bottom" constant="100" id="AhJ-PL-IqD"/>
+                            <constraint firstItem="7e0-ae-XZZ" firstAttribute="top" secondItem="sbx-xP-Eh2" secondAttribute="top" id="LCR-sZ-KsO"/>
+                            <constraint firstAttribute="trailing" secondItem="7e0-ae-XZZ" secondAttribute="trailing" id="TUR-s5-oD3"/>
+                            <constraint firstItem="afO-JY-Xce" firstAttribute="bottom" secondItem="seq-6X-Vde" secondAttribute="bottom" id="iah-0Y-Bdg"/>
+                            <constraint firstItem="Npg-IX-5S5" firstAttribute="top" secondItem="afO-JY-Xce" secondAttribute="top" constant="56" id="lFr-PY-G9T"/>
+                            <constraint firstItem="seq-6X-Vde" firstAttribute="leading" secondItem="afO-JY-Xce" secondAttribute="leading" id="uYc-If-07o"/>
+                            <constraint firstItem="afO-JY-Xce" firstAttribute="trailing" secondItem="seq-6X-Vde" secondAttribute="trailing" id="wZE-Ku-apA"/>
+                            <constraint firstItem="seq-6X-Vde" firstAttribute="top" secondItem="afO-JY-Xce" secondAttribute="top" constant="100" id="xJI-mJ-pE5"/>
+                            <constraint firstItem="afO-JY-Xce" firstAttribute="bottom" secondItem="Npg-IX-5S5" secondAttribute="bottom" id="yll-tC-4QF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="afO-JY-Xce"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u30-PV-U7A"/>
+                    <connections>
+                        <outlet property="card" destination="seq-6X-Vde" id="fca-we-njT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag5-Ys-cUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="504.91071428571428"/>
+        </scene>
+        <!--Topps70 View Controller-->
+        <scene sceneID="van-yh-y5F">
+            <objects>
+                <viewController id="6aT-8k-Hk2" customClass="Topps70ViewController" customModule="Topps_Pack_Opener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O88-4d-TmN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMB-eF-MEC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                <items>
+                                    <navigationItem title="1970 Topps" id="9tp-XH-ABd">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="BNy-9F-Fu5">
+                                            <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vQa-xV-DP4">
+                                                <rect key="frame" x="20" y="13" width="41" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <segue destination="qC3-WY-rm0" kind="show" id="sXN-57-X9d"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" style="plain" id="v03-vc-sSi">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QZ1-Ta-W4x">
+                                                <rect key="frame" x="325" y="13" width="69" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Collection"/>
+                                                <connections>
+                                                    <segue destination="XL6-bA-pcD" kind="show" id="bQ4-4J-NQU"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkF-qr-nJ7">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                                <connections>
+                                    <action selector="switchCard:" destination="6aT-8k-Hk2" eventType="touchUpInside" id="IJ1-Hc-uAp"/>
+                                    <segue destination="qC3-WY-rm0" kind="show" identifier="back" id="AnW-w8-bgJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1970 Topps" translatesAutoresizingMaskIntoConstraints="NO" id="Maw-10-plB">
+                                <rect key="frame" x="0.0" y="100" width="414" height="708"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AMB-eF-MEC" secondAttribute="bottom" constant="100" id="70r-EP-PPi"/>
+                            <constraint firstItem="lkF-qr-nJ7" firstAttribute="leading" secondItem="TPz-bi-iyk" secondAttribute="leading" id="Eov-WW-QvG"/>
+                            <constraint firstItem="TPz-bi-iyk" firstAttribute="bottom" secondItem="Maw-10-plB" secondAttribute="bottom" id="Mwx-9d-4SV"/>
+                            <constraint firstItem="AMB-eF-MEC" firstAttribute="leading" secondItem="O88-4d-TmN" secondAttribute="leading" id="SBb-H7-mOz"/>
+                            <constraint firstItem="TPz-bi-iyk" firstAttribute="bottom" secondItem="lkF-qr-nJ7" secondAttribute="bottom" id="VGK-kh-2ex"/>
+                            <constraint firstItem="TPz-bi-iyk" firstAttribute="trailing" secondItem="Maw-10-plB" secondAttribute="trailing" id="aST-7J-ooO"/>
+                            <constraint firstItem="Maw-10-plB" firstAttribute="leading" secondItem="TPz-bi-iyk" secondAttribute="leading" id="aXa-UO-hYY"/>
+                            <constraint firstItem="AMB-eF-MEC" firstAttribute="top" secondItem="O88-4d-TmN" secondAttribute="top" id="dBT-KM-3dg"/>
+                            <constraint firstAttribute="trailing" secondItem="AMB-eF-MEC" secondAttribute="trailing" id="iUp-Dr-E8M"/>
+                            <constraint firstItem="Maw-10-plB" firstAttribute="top" secondItem="TPz-bi-iyk" secondAttribute="top" constant="100" id="rax-Y5-z5N"/>
+                            <constraint firstItem="lkF-qr-nJ7" firstAttribute="top" secondItem="TPz-bi-iyk" secondAttribute="top" constant="100" id="tfD-uk-oMf"/>
+                            <constraint firstItem="TPz-bi-iyk" firstAttribute="trailing" secondItem="lkF-qr-nJ7" secondAttribute="trailing" id="wRh-u6-8g7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TPz-bi-iyk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gr1-5k-EFQ"/>
+                    <connections>
+                        <outlet property="card" destination="Maw-10-plB" id="sYE-xd-0Jb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y92-i2-OoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="1235"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1957 Topps" width="276" height="380"/>
+        <image name="1970 Topps" width="258" height="358"/>
+        <image name="2018 Topps Update" width="269" height="443"/>
+        <image name="2019 Topps" width="434" height="497"/>
+        <image name="PackImage19Topps" width="330" height="521"/>
+        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HMU-Kh-Am8"/>
+        <segue reference="o2b-BP-WoH"/>
+    </inferredMetricsTieBreakers>
+</document>
